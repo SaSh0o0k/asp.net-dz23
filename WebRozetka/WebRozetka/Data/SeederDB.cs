@@ -86,7 +86,11 @@ namespace WebRozetka.Data
 
                     foreach(var category in list)
                     {
+<<<<<<< HEAD
                         category.Image = ImageWorker.SaveImageFromUrlAsync("https://loremflickr.com/800/600/eat").Result;
+=======
+                        category.Image = ImageWorker.SaveImageFromUrlAsync("https://loremflickr.com/800/600/products").Result;
+>>>>>>> dacdeb303c1b35ee6cdd4a207ead362cb305f343
                         context.Categories.Add(category);
                         context.SaveChanges();
                     }
@@ -112,7 +116,11 @@ namespace WebRozetka.Data
                          .RuleFor(o => o.Quantity, f => f.Random.Number(0, 1000))
                          .RuleFor(o => o.CategoryId, f => f.PickRandom(categoriesId));
 
+<<<<<<< HEAD
                     var fakeProducts = fakeProduct.Generate(200);
+=======
+                    var fakeProducts = fakeProduct.Generate(100);
+>>>>>>> dacdeb303c1b35ee6cdd4a207ead362cb305f343
 
                     context.Products.AddRange(fakeProducts);
                     context.SaveChanges();
@@ -125,7 +133,11 @@ namespace WebRozetka.Data
 
                         for (int i = 0; i < numberOfPhotos; i++)
                         {
+<<<<<<< HEAD
                             var fakeImage = ImageWorker.SaveImageFromUrlAsync("https://loremflickr.com/800/600/fruits").Result;
+=======
+                            var fakeImage = ImageWorker.SaveImageFromUrlAsync("https://loremflickr.com/800/600/product").Result;
+>>>>>>> dacdeb303c1b35ee6cdd4a207ead362cb305f343
                             photos.Add(new ProductImageEntity
                             {
                                 Name = fakeImage,
